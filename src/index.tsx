@@ -1,7 +1,7 @@
 //LIBS
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 //STYLES
 import "./index.css";
@@ -14,12 +14,12 @@ const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
             <Route path="/" element={<Menu />} />
             <Route path="colorpicker" element={<ColorPicker />} />
         </Routes>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

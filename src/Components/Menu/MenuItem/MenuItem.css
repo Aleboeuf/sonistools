@@ -1,6 +1,7 @@
 #menu-item {
     height: 180px;
     width: 180px;
+    min-width: 180px;
     background-color: #29292e;
     border-radius: 1rem;
     margin: 2rem;

@@ -6,8 +6,10 @@ let mainWindow: Electron.BrowserWindow | null;
 function createWindow() {
     // Create the browser window.electron
     mainWindow = new BrowserWindow({
-        height: 600,
-        width: 800,
+        height: 1024,
+        width: 768,
+        minWidth: 485,
+        minHeight: 300,
         webPreferences: {
             preload: path.join(__dirname, "preload.js"),
         },
@@ -16,8 +18,8 @@ function createWindow() {
     // and load the index.html of the app
     mainWindow.loadFile(path.join(__dirname, "index.html"));
 
-    // open the DevTools
-    mainWindow.webContents.openDevTools();
+    // open the DevTools on start
+    //mainWindow.webContents.openDevTools();
 
     // emitted when the window is closed
     mainWindow.on("closed", () => {
